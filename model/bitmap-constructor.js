@@ -18,11 +18,26 @@ Bitmap.prototype.blackOut = function() {
   this.colorArray.fill(0);
 };
 
+//whiteout
+Bitmap.prototype.blackOut = function() {
+  this.colorArray.fill(f);
+};
+
+//greyout
+Bitmap.prototype.blackOut = function() {
+  this.colorArray.fill(c);
+};
+
 //reverse
 Bitmap.prototype.reversed = function() {
   this.pixelOffSet.reverse();
 };
 
-
+//random
+Bitmap.prototype.random = function(){
+  for(var i = 0; i< this.colorArray.length; i+=4){
+    this.colorArray[i] = Math.floor(Math.random() *255) +1;
+  };
+};
 
 
